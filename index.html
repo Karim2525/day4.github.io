@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		
+	</style>
+
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+
+	<div id="sales" class="colum">Страны! <input type="button" value="Узнать" onclick="buy()" />
+<script>
+var sales_div = document.getElementById("sales");
+function buy(){
+sales.innerHTML = fetch("https://restcountries.com/v3.1/region/europe")
+               .then(resolve => resolve.json())
+               .then(data => {
+                   data.forEach(country => {
+                       document.write(country.capital[0], "<br>");
+
+                   });
+               })
+;
+}
+
+</script>
+
+</div>
+</div>
+</body>
+</html>
